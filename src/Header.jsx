@@ -12,7 +12,7 @@ class Header extends React.Component {
           alt='Valorant Icon' 
           className='valorant-icon'
           />
-          <h1>Valorant Infos</h1>
+          <h1>vALORANT INFOS</h1>
         </div>
         <div className='header-buttons-div'>
           <Button type='button' text='Agentes' className='header-buttons' />

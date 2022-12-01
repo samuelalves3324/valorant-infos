@@ -1,3 +1,10 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .valorant-icon {
   width: 60px;
   height: 60px;
@@ -6,6 +13,11 @@
 .title-with-icon {
   display: flex;
   align-items: center;
+}
+
+.title-with-icon h1 {
+  font-family: VALORANT, sans-serif;
+  height: 25px;
 }
 
 .header-buttons-div {
@@ -33,6 +45,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(19, 18, 18);
+  background-color: rgb(27, 24, 24);
   color: white;
+  box-shadow: 0px 1px 5px black;
 }
