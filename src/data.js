@@ -6,7 +6,7 @@ export const getAgentsList = async () => {
 
 export const getAgentByName = async (name) => {
   const agents = await getAgentsList();
-  return agents.find((agent) => agent.displayName = name);
+  return agents.find((agent) => agent.displayName === name);
 }
 
 export const getWeaponsList = async () => {
