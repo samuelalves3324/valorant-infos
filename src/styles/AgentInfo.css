@@ -1,0 +1,81 @@
+.agent-info {
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.agent-img {
+  width: 400px;
+  height: 400px;
+}
+
+.agent-description {
+  margin-top: 20px;
+}
+
+.agent-info h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+.agent-curiosities {
+  display: flex;
+}
+
+.agent-skills {
+  text-align: center;
+  font-size: 50px;
+}
+
+.agent-bio {
+  padding: 20px;
+  background-color: #262626;
+  border-radius: 20px;
+  margin: 20px 40px 20px 0;
+  font-size: 18px;
+}
+
+.return-button {
+  margin-left: 88%;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 120px;
+  height: 40px;
+}
+
+.agents-page {
+  z-index: 1;
+}
+
+.agent-audio {
+  margin: 20px 0px;
+}
+
+.abilities-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 720px) {
+  .agent-curiosities {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .abilities-section {
+    justify-content: center;
+  }
+
+  .return-button {
+    display: none;
+  }
+
+  .agent-description {
+    margin-left: 45px;
+  }
+
+  .agent-info h1 {
+    margin-top: 10px;
+  }
+}

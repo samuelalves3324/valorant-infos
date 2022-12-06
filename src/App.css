@@ -9,33 +9,23 @@ body {
   background-color: #fafafa;
 }
 
-.valorant-icon {
-  width: 60px;
-  height: 60px;
+main {
+  padding-top: 63px;
 }
 
-.title-and-icon {
-  display: flex;
-  align-items: center;
-  margin-left: 5px;
+img {
+  display: block;
 }
 
-.title-and-icon h1 {
-  font-family: VALORANT, sans-serif;
-  height: 25px;
+a {
+  text-decoration: none;
 }
 
-.header-buttons-div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.header-buttons {
-  width: 110px;
-  height: 36px;
+.buttons {
+  width: 100px;
+  height: 30px;
   margin: 10px;
-  font-size: 20px;
+  font-size: 17px;
   background-color: #dc3d4b;
   border: none;
   border-radius: 5px;
@@ -43,17 +33,10 @@ body {
   color: white;
 }
 
-.header-buttons:hover {
+.buttons:hover {
   background-color: #fa4454;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(27, 24, 24);
-  color: white;
-  box-shadow: 0px 1px 5px black;
-}
 
 .card {
   text-align: center;
@@ -78,23 +61,6 @@ header {
 .card-agents-section {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 15px;
 }
 
-.agent-img {
-  width: 400px;
-}
-
-.agent-info h1 {
-  text-align: center;
-  font-size: 50px;
-  margin: 10px;
-}
-
-.ability-img {
-  width: 100px;
-}
-
-link {
-  text-decoration: none;
-  color: white;
-}

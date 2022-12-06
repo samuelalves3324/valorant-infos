@@ -1,0 +1,35 @@
+.ability-card {
+  padding: 10px;
+  background-color: #262626;
+  border-radius: 20px;
+  margin: 10px;
+  max-width: 400px;
+}
+
+.ability-card h4 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.ability-card p {
+  font-size: 16px;
+}
+
+.ability-title {
+  display: flex;
+  align-items: center;
+  background-color: #dc3d4b;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.ability-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.ability-items {
+  margin: 10px;
+}

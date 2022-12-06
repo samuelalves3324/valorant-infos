@@ -1,25 +1,31 @@
 import React from 'react';
 import Image from './Image';
+import '../styles/AbilityCard.css';
 
 class AbilityCard extends React.Component {
   render() {
     const { displayName, displayIcon, description, slot } = this.props;
     let abilityHotkey = '';
     if (slot === "Ability1") {
-      abilityHotkey = 'Q';
+      abilityHotkey = 'Q -';
     } else if (slot === "Ability2") {
-      abilityHotkey = 'E';
+      abilityHotkey = 'E -';
     } else if (slot === "Grenade") {
-      abilityHotkey = 'C';
+      abilityHotkey = 'C -';
     } else if (slot === "Ultimate") {
-      abilityHotkey = 'X';
-    } 
+      abilityHotkey = 'X -';
+    } else {
+      abilityHotkey = 'Passiva -'
+    }
     return (
       <div className='ability-card'>
-        <h4>{ displayName }</h4>
-        <span>{ abilityHotkey }</span>
-        <Image src={ displayIcon } alt={ displayName } className="ability-img"/>
-        <p>{ description }</p>
+        <div className='ability-title'>
+          <Image src={ displayIcon } className="ability-img"/>
+          <h4>{ `${abilityHotkey} ${displayName}` }</h4>
+        </div>
+        <div className='ability-items'>
+          <p>{ description }</p>
+        </div>
       </div>
     );
   }

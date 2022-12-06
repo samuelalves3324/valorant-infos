@@ -3,6 +3,7 @@ import Image from './Image';
 import Button from './Button';
 import RoleCard from './RoleCard';
 import AbilityCard from './AbilityCard';
+import '../styles/AgentInfo.css';
 
 class AgentInfo extends React.Component {
   render() {
@@ -15,13 +16,25 @@ class AgentInfo extends React.Component {
     const roleDescription = role ? role.description : "";
     return (
       <section className='agent-info'>
-        <h1>{ displayName }</h1>
-        <Image src={ fullPortrait } alt={ displayName } className="agent-img"/>
-        <p>{ description }</p>
-        { mediaList ? <audio controls><source src={ wave } type="audio/wav"/></audio> : '' }
-        <RoleCard displayName={ roleName } displayIcon={ roleIcon } description={ roleDescription }/>
-        { abilities ? abilities.map((ability) => <AbilityCard key={ ability.displayName } displayName={ ability.displayName } displayIcon={ ability.displayIcon } description={ ability.description } slot={ ability.slot }/>) : "" }
-        { displayName ? <Button type="button" className="return-button" text="Voltar" onClick={ onClick }/> : '' }
+        { displayName ? <Button type="button" className="return-button buttons" text="VOLTAR" onClick={ onClick }/> : '' }
+        <div className='agent-curiosities'>
+          <div>
+            <h1>{ displayName }</h1>
+            <Image src={ fullPortrait } alt={ displayName } className="agent-img"/>
+          </div>
+          <div className='agent-description'>
+            <span>// FUNÇÃO</span>
+            <RoleCard displayName={ roleName } displayIcon={ roleIcon } description={ roleDescription }/>
+            <span>// BIOGRAFIA</span>
+            <p className='agent-bio'>{ description }</p>
+            <div className='agent-audio'>// ÁUDIO</div>
+            { mediaList ? <audio controls><source src={ wave } type="audio/wav"/></audio> : '' }
+          </div>
+        </div>
+        <h2 className='agent-skills'>HABILIDADES</h2>
+        <div className='abilities-section'>
+          { abilities ? abilities.map((ability) => <AbilityCard key={ ability.displayName } displayName={ ability.displayName } displayIcon={ ability.displayIcon } description={ ability.description } slot={ ability.slot }/>) : "" }
+        </div>
       </section>
     );
   }

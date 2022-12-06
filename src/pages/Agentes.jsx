@@ -8,7 +8,8 @@ class Agentes extends React.Component {
   state = {
     agentsList: [],
     reload: 0,
-    selectedAgent: {}
+    selectedAgent: {},
+    display: 'none'
   }
 
   loadAgents = async () => {
@@ -25,7 +26,8 @@ class Agentes extends React.Component {
   onReturnButtonClick = () => {
     this.setState({
       reload: 0,
-      selectedAgent: {}
+      selectedAgent: {},
+      display: 'none'
     }, () => this.loadAgents())
   }
 
@@ -34,19 +36,24 @@ class Agentes extends React.Component {
     const agent = await getAgentByName(id);
     this.setState({
       agentsList: [],
-      selectedAgent: agent
+      selectedAgent: agent,
+      display: 'block'
     })
   }
   render() {
     this.loadAgents();
-    const { agentsList, selectedAgent } = this.state;
+    const { agentsList, selectedAgent, display } = this.state;
     return (
-      <div>
+      <div className='agents-page'>
         <Header />
-        <div className='card-agents-section'>
-          { agentsList.map((agent) => <Card obj={ agent } onClick={ this.onAgentCardClick } key={ agent.displayName }/>) }
-        </div>
-        <AgentInfo obj={ selectedAgent } onClick={ this.onReturnButtonClick }/>
+        <main>
+          <div className='card-agents-section'>
+            { agentsList.map((agent) => <Card obj={ agent } onClick={ this.onAgentCardClick } key={ agent.displayName }/>) }
+          </div>
+          <div className='agents-section' style={ { display: display } }>
+            <AgentInfo obj={ selectedAgent } onClick={ this.onReturnButtonClick }/>
+          </div>
+        </main>
       </div>
     );
   }
