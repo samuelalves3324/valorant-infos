@@ -1,6 +1,7 @@
 .agent-info {
   background-color: #1b1b1b;
   color: white;
+  padding-top: 30px;
 }
 
 .agent-img {
@@ -35,14 +36,6 @@
   font-size: 18px;
 }
 
-.return-button {
-  margin-left: 88%;
-  margin-top: 20px;
-  font-size: 20px;
-  width: 120px;
-  height: 40px;
-}
-
 .agents-page {
   z-index: 1;
 }
@@ -65,10 +58,6 @@
 
   .abilities-section {
     justify-content: center;
-  }
-
-  .return-button {
-    display: none;
   }
 
   .agent-description {

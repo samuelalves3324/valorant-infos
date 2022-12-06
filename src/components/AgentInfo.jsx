@@ -1,14 +1,26 @@
 import React from 'react';
 import Image from './Image';
-import Button from './Button';
 import RoleCard from './RoleCard';
 import AbilityCard from './AbilityCard';
 import '../styles/AgentInfo.css';
+import { getAgentByName } from '../data';
 
 class AgentInfo extends React.Component {
+  state = {
+    agentObj: {}
+  }
+
+  loadAgent = async (name) => {
+    const agentObj = await getAgentByName(name);
+    this.setState({
+      agentObj: agentObj
+    })
+  }
   render() {
-    const { obj, onClick } = this.props;
-    const { displayName, description, fullPortrait, role, abilities, voiceLine } = obj;
+    const { name } = this.props;
+    this.loadAgent(name);
+    const { agentObj } = this.state;
+    const { displayName, description, fullPortrait, role, abilities, voiceLine } = agentObj;
     const mediaList = voiceLine ? voiceLine.mediaList : undefined;
     const wave = mediaList ? mediaList[0].wave : "";
     const roleName = role ? role.displayName : "";
@@ -16,7 +28,6 @@ class AgentInfo extends React.Component {
     const roleDescription = role ? role.description : "";
     return (
       <section className='agent-info'>
-        { displayName ? <Button type="button" className="return-button buttons" text="VOLTAR" onClick={ onClick }/> : '' }
         <div className='agent-curiosities'>
           <div>
             <h1>{ displayName }</h1>

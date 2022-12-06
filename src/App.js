@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Agentes from './pages/Agentes';
+import AgentPage from './pages/AgentPage';
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/" element={ <Home /> }/>
             <Route path="/agentes" element={ <Agentes /> }/>
+            <Route path="/agentes/:agent" element={ <AgentPage/> }/>
           </Routes>
        </Router>
       </div>

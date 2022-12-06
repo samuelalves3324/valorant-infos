@@ -16,7 +16,6 @@ class Header extends React.Component {
               className='valorant-icon'
               />
               <h1>vALORANT INFOS</h1>
-              
           </div>
         </Link>
         <div className='header-buttons-div'>
