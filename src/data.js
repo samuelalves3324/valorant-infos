@@ -1,5 +1,5 @@
 export const getAgentsList = async () => {
-  const response = await fetch('https://valorant-api.com/v1/agents?language=pt-BR');
+  const response = await fetch('https://valorant-api.com/v1/agents?language=pt-BR&isPlayableCharacter=true');
   const data = await response.json();
   return data.data;
 }

@@ -7,6 +7,7 @@
 
 body {
   background-color: #fafafa;
+  background-color: gray;
 }
 
 .valorant-icon {
@@ -14,13 +15,13 @@ body {
   height: 60px;
 }
 
-.title-with-icon {
+.title-and-icon {
   display: flex;
   align-items: center;
   margin-left: 5px;
 }
 
-.title-with-icon h1 {
+.title-and-icon h1 {
   font-family: VALORANT, sans-serif;
   height: 25px;
 }
@@ -78,4 +79,18 @@ header {
 .section {
   display: flex;
   flex-wrap: wrap;
+}
+
+.agent-img {
+  width: 400px;
+}
+
+.agent-info h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.ability-img {
+  width: 100px;
 }

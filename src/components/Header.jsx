@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className='title-with-icon'>
+        <div className='title-and-icon'>
           <Image 
           src='https://img.icons8.com/color/480/valorant.png' 
           alt='Valorant Icon' 

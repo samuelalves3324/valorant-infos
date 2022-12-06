@@ -2,9 +2,9 @@ import React from "react";
 
 class Image extends React.Component {
   render() {
-    const { src, alt, className } = this.props;
+    const { src, alt, className, id } = this.props;
     return (
-      <img src={ src } alt={ alt } className={ className }/>
+      <img src={ src } alt={ alt } className={ className } id={ id }/>
     );
   }
 }
