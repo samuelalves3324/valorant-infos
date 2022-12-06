@@ -7,7 +7,6 @@
 
 body {
   background-color: #fafafa;
-  background-color: gray;
 }
 
 .valorant-icon {
@@ -76,7 +75,7 @@ header {
   display: block;
 }
 
-.section {
+.card-agents-section {
   display: flex;
   flex-wrap: wrap;
 }
@@ -93,4 +92,9 @@ header {
 
 .ability-img {
   width: 100px;
+}
+
+link {
+  text-decoration: none;
+  color: white;
 }
