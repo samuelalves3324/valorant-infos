@@ -1,0 +1,23 @@
+footer {
+  background-color: rgb(27, 24, 24);
+  color: white;
+  min-height: 10vh;
+  max-height: 10vh;
+  border: solid 1px black;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.icon {
+  margin: 5px;
+  width: 28px;
+  height: 28px;
+}
+
+.icons-container {
+  margin-top: 5px;
+}

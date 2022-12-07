@@ -6,6 +6,7 @@
 .card-agents-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 76%;
   margin: auto;
   background-color: #262626;

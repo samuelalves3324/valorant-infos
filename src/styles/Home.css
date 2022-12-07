@@ -1,0 +1,80 @@
+.home-page {
+  background-image: url('https://i.pinimg.com/originals/e5/2d/57/e52d573ea72014060136bea750762d6e.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+}
+
+.home-page h1 {
+  font-family: VALORANT, sans-serif;
+  color: white;
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+}
+
+.home-page p {
+  font-size: 25px;
+  color: white;
+}
+
+.home-page-button {
+  width: 130px;
+  height: 50px;
+  margin: 0 30px;
+  font-size: 20px;
+  background-color: #fa4454;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+  min-height: 79.6vh;
+}
+
+
+@media screen and (max-width: 720px) {
+  .home-page h1 {
+    font-size: 50px;
+  }
+
+  .home-page p {
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  .home-page-button {
+    width: 100px;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .home-page h1 {
+    font-size: 50px;
+  }
+
+  .home-page p {
+    font-size: 15px;
+    margin-left: 30px;
+  }
+
+  .home-page-button {
+    width: 100px;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+
+}
