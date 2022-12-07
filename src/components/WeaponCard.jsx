@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from './Image';
 
-class WeaoponCard extends React.Component {
+class WeaponCard extends React.Component {
   render() {
     const { obj } = this.props;
     const { displayName, displayIcon } = obj;
@@ -17,4 +17,4 @@ class WeaoponCard extends React.Component {
   }
 }
 
-export default WeaoponCard;
+export default WeaponCard;

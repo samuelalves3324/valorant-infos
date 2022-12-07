@@ -22,6 +22,11 @@ a {
   color: white;
 }
 
+video {
+  width: 50%;
+  height: 50%;
+}
+
 .buttons {
   width: 100px;
   height: 30px;

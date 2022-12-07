@@ -20,7 +20,7 @@ class WeaponSkins extends React.Component {
     const { weaponSkinsArray } = this.state;
     return (
       <section>
-        { weaponSkinsArray.map((skin) => <SkinCard obj={ skin }/>) }
+        { weaponSkinsArray.map((skin, index) => <SkinCard obj={ skin } weaponName={ name } key={`${skin.displayName} ${index}`}/>) }
       </section>
     );
   }

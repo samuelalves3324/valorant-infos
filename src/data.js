@@ -26,6 +26,6 @@ export const getWeaponSkinsByName = async (name) => {
 }
 
 export const getSkinByName = async (weaponName, skinName) => {
-  const skins = await getWeaponByName(weaponName);
+  const skins = await getWeaponSkinsByName(weaponName);
   return skins.find((skin) => skin.displayName === skinName);
 }

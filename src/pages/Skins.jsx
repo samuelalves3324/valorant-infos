@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import WeaoponCard from '../components/WeaponCard';
+import WeaponCard from '../components/WeaponCard';
 import { getWeaponsList } from '../data';
 
 class Skins extends React.Component {
@@ -22,7 +22,7 @@ class Skins extends React.Component {
       <div>
         <Header />
         <main>
-          { weaponList.map((weaopn) => <WeaoponCard obj={ weaopn } key={ weaopn.displayName }/>) }
+          { weaponList.map((weaopn) => <WeaponCard obj={ weaopn } key={ weaopn.displayName }/>) }
         </main>
       </div>
     );

@@ -6,6 +6,7 @@ import Agentes from './pages/Agentes';
 import AgentPage from './pages/AgentPage';
 import Skins from './pages/Skins';
 import WeaponPage from './pages/WeaponPage';
+import SkinPage from './pages/SkinPage';
 
 class App extends React.Component {
   render() {
@@ -18,7 +19,7 @@ class App extends React.Component {
             <Route path="/agentes/:agent" element={ <AgentPage /> }/>
             <Route path="/skins" element={ <Skins /> }/>
             <Route path="/skins/:weapon" element={ <WeaponPage /> }/>
-            <Route path="/skins/:weapon/:skin"/>
+            <Route path="/skins/:weapon/:skin" element={ <SkinPage /> }/>
           </Routes>
        </Router>
       </div>
