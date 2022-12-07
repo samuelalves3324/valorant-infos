@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Image from './Image';
 
 class WeaoponCard extends React.Component {
@@ -6,9 +7,11 @@ class WeaoponCard extends React.Component {
     const { obj } = this.props;
     const { displayName, displayIcon } = obj;
     return (
-      <section id={ displayName }>
-        <h3>{ displayName }</h3>
-        <Image src={ displayIcon } alt={ displayName }/>
+      <section id={ displayName } className="card">
+        <Link to={`/skins/${ displayName }`}>
+          <h3>{ displayName }</h3>
+          <Image src={ displayIcon } alt={ displayName }/>
+        </Link>
       </section>
     );
   }
