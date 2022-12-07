@@ -1,5 +1,6 @@
 .agents-page {
   background-color: #1b1b1b;
+  min-height: 100vh
 }
 
 .card-agents-section {
@@ -8,4 +9,53 @@
   width: 76%;
   margin: auto;
   background-color: #262626;
+}
+
+.filter-section {
+  width: 76%;
+  margin: auto;
+  margin-top: 3px;
+  background-color: #262626;
+}
+
+.filter-input {
+  font-size: 17px;
+  outline: none;
+  padding: 10.2px;
+  width: 200px;
+  border: none;
+  background-color: #717171;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.form-filter {
+  margin: 0 10px;
+  padding-bottom: 20px;
+}
+
+.form-filter h1 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-bottom: -4px;
+  cursor: pointer;
+  color: #2d2d2d;
+}
+
+.input-section {
+  background-color: #717171;
+  display: inline-block;
+  border-radius: 16px;
 }
