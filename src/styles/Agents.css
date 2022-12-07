@@ -20,7 +20,7 @@
 }
 
 .filter-input {
-  font-size: 17px;
+  font-size: 1.7rem;
   outline: none;
   padding: 10.2px;
   width: 200px;
@@ -44,6 +44,7 @@
   text-align: center;
   margin: 0;
   padding: 20px;
+  font-size: 2.8rem;
 }
 
 .search-icon {

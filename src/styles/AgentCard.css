@@ -1,6 +1,5 @@
-.card {
+.agent-card {
   text-align: center;
-  font-size: 20px;
   cursor: pointer;
   margin: 10.5px;
   border-radius: 10px;
@@ -8,13 +7,13 @@
   background-color: #4b4b4b;
 }
 
-.card h3 {
+.agent-card-title {
   margin: 10px;
+  font-size: 1.7rem;
 }
 
-.card-image {
+.agent-card-image {
   width: 150px;
   border-radius: 5px;
   display: block;
 }
-

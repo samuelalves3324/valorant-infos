@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from './Image';
-import '../styles/Card.css';
+import '../styles/AgentCard.css';
 import { Link } from 'react-router-dom';
 
 class AgentCard extends React.Component {
@@ -8,12 +8,12 @@ class AgentCard extends React.Component {
     const { obj } = this.props;
     const { displayName, displayIcon } = obj;
     return (
-      <section className='card' id={ displayName }>
+      <div className='agent-card'>
         <Link to={`/agentes/${ displayName === 'KAY/O' ? 'KAY-O' : displayName }`}>
-          <h3>{ displayName }</h3>
-          <Image src={ displayIcon } alt={ displayName } className='card-image'/>
+          <h3 className='agent-card-title'>{ displayName }</h3>
+          <Image src={ displayIcon } alt={ displayName } className='agent-card-image'/>
         </Link>
-      </section>
+      </div>
     );
   }
 }

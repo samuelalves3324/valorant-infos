@@ -11,21 +11,21 @@ class Home extends React.Component {
       <div>
         <Header />
         <main>
-            <div className='home-page'>
-              <div className='home-container'>
-                <h1>vALORANT INFOS</h1>
-                <p>Aqui você encontra informações atualizadas sobre valorant!</p>
-                <div>
-                  <Link to="/agentes">
-                    <Button type='button' text='AGENTES' className='home-page-button' />
-                  </Link>
-                  <Link to="/skins">
-                    <Button type='button' text='SKINS' className='home-page-button' />
-                  </Link>
-                </div>
+          <div className='home-page'>
+            <div className='center-container'>
+              <h1>vALORANT INFOS</h1>
+              <p>Aqui você encontra informações atualizadas sobre valorant!</p>
+              <div>
+                <Link to="/agentes">
+                  <Button type='button' text='AGENTES' className='home-page-button' />
+                </Link>
+                <Link to="/skins">
+                  <Button type='button' text='SKINS' className='home-page-button' />
+                </Link>
               </div>
             </div>
-          </main>
+          </div>
+        </main>
         <Footer />
       </div>
     );

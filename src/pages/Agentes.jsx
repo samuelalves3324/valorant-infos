@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import AgentCard from '../components/AgentCard';
 import '../styles/Agents.css';
 import FormFilter from '../components/FormFilter';
+import Footer from '../components/Footer';
 
 class Agentes extends React.Component {
   state = {
@@ -41,6 +42,7 @@ class Agentes extends React.Component {
             .map((agent) => <AgentCard obj={ agent } key={ agent.displayName }/>) }
           </div>
         </main>
+        <Footer />
       </div>
     );
   }

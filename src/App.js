@@ -10,8 +10,7 @@ import SkinPage from './pages/SkinPage';
 
 class App extends React.Component {
   render() {
-    return (
-      <div className="App">
+    return ( 
        <Router>
           <Routes>
             <Route path="/" element={ <Home /> }/>
@@ -22,7 +21,6 @@ class App extends React.Component {
             <Route path="/skins/:weapon/:skin" element={ <SkinPage /> }/>
           </Routes>
        </Router>
-      </div>
     );
   }
 }

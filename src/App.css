@@ -3,14 +3,16 @@
 
 * {
   font-family: 'Ubuntu', sans-serif;
-}
-
-body {
-  background-color: #fafafa;
+  font-size: 10px;
 }
 
 main {
-  padding-top: 67px;
+  padding-top: 10vh;
+  min-height: 79.7vh;
+}
+
+body {
+  background-color: #1b1b1b;
 }
 
 img {
@@ -31,7 +33,7 @@ video {
   width: 100px;
   height: 30px;
   margin: 10px;
-  font-size: 17px;
+  font-size: 1.7rem;
   background-color: #dc3d4b;
   border: none;
   border-radius: 5px;
@@ -43,3 +45,8 @@ video {
   background-color: #fa4454;
 }
 
+@media screen and (max-width: 720px) {
+  * {
+    font-size: 7px;
+  }
+}

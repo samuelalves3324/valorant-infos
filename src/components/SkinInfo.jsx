@@ -1,6 +1,5 @@
 import React from 'react';
 import { getSkinByName } from '../data';
-import Header from './Header';
 import Image from './Image';
 import SkinChroma from './SkinChroma';
 import SkinLevel from './SkinLevel';
@@ -26,7 +25,6 @@ class SkinInfo extends React.Component {
     const chromasList = chromas ? chromas : [];
     return(
       <div>
-        <Header />
         <main>
           <h1>{ displayName }</h1>
           <Image src={ displayIcon ? displayIcon : secondImage }/>

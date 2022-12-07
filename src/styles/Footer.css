@@ -1,15 +1,14 @@
 footer {
   background-color: rgb(27, 24, 24);
   color: white;
-  min-height: 10vh;
-  max-height: 10vh;
+  height: 10vh;
   border: solid 1px black;
   text-align: center;
 }
 
 footer p {
   margin: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .icon {

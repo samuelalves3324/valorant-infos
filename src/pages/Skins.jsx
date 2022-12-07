@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WeaponCard from '../components/WeaponCard';
 import { getWeaponsList } from '../data';
@@ -24,6 +25,7 @@ class Skins extends React.Component {
         <main>
           { weaponList.map((weaopn) => <WeaponCard obj={ weaopn } key={ weaopn.displayName }/>) }
         </main>
+        <Footer />
       </div>
     );
   }

@@ -1,12 +1,13 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: rgb(27, 24, 24);
   color: white;
   box-shadow: 0px 1px 5px black;
   position: fixed;
   width: 100%;
-  height: 67px;
+  height: 10%;
   z-index: 2;
 }
 
@@ -15,20 +16,21 @@ header {
   height: 40px;
 }
 
-.title-and-icon {
+.logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-left: 20px;
 }
 
-.title-and-icon h1 {
+.logo-container h1 {
   font-family: VALORANT, sans-serif;
   height: 25px;
   color: white;
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 
-.header-buttons-div {
+.header-buttons-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,20 +38,15 @@ header {
 }
 
 @media screen and (max-width: 720px) {
-  .title-and-icon h1 {
+  .logo-container {
+    margin-left: 5px;
+  }
+
+  .logo-container h1 {
     display: none;
   }
 
-  .title-and-icon {
-    margin-top: 10px;
-  }
-
-  .valorant-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  header {
-    justify-content: flex-start;
+  .header-buttons-container {
+    margin-right: 5px;
   }
 }

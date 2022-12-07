@@ -9,7 +9,7 @@ class Header extends React.Component {
     return (
       <header>
         <Link to="/">
-          <div className='title-and-icon'>
+          <div className='logo-container'>
               <Image 
               src='https://img.icons8.com/color/480/valorant.png' 
               alt='Valorant Icon' 
@@ -18,7 +18,7 @@ class Header extends React.Component {
               <h1>vALORANT INFOS</h1>
           </div>
         </Link>
-        <div className='header-buttons-div'>
+        <div className='header-buttons-container'>
           <Link to="/agentes">
             <Button type='button' text='AGENTES' className='buttons' />
           </Link>
