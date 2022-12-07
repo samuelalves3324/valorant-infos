@@ -1,7 +1,7 @@
 import React from 'react';
 import { getAgentsList } from '../data';
 import Header from '../components/Header';
-import Card from '../components/Card';
+import AgentCard from '../components/AgentCard';
 import '../styles/Agents.css';
 import FormFilter from '../components/FormFilter';
 
@@ -38,7 +38,7 @@ class Agentes extends React.Component {
           <div className='card-agents-section'>
             { agentsList
             .filter((agent) => agent.displayName.toLowerCase().includes(filterInput.toLowerCase()))
-            .map((agent) => <Card obj={ agent } key={ agent.displayName }/>) }
+            .map((agent) => <AgentCard obj={ agent } key={ agent.displayName }/>) }
           </div>
         </main>
       </div>

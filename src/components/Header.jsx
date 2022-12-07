@@ -22,7 +22,9 @@ class Header extends React.Component {
           <Link to="/agentes">
             <Button type='button' text='AGENTES' className='buttons' />
           </Link>
-          <Button type='button' text='ARMAS' className='buttons' />
+          <Link to="/skins">
+            <Button type='button' text='SKINS' className='buttons' />
+          </Link>
         </div>
       </header>
     );

@@ -3,19 +3,19 @@ import Image from './Image';
 import '../styles/Card.css';
 import { Link } from 'react-router-dom';
 
-class Card extends React.Component {
+class AgentCard extends React.Component {
   render() {
-    const { obj, onClick } = this.props;
+    const { obj } = this.props;
     const { displayName, displayIcon } = obj;
     return (
-      <section className='card' onClick={ onClick } id={ displayName }>
+      <section className='card' id={ displayName }>
         <Link to={`/agentes/${ displayName === 'KAY/O' ? 'KAY-O' : displayName }`}>
-          <h3 id={ displayName }>{ displayName }</h3>
-          <Image src={ displayIcon } alt={ displayName } className='card-image'id={ displayName }/>
+          <h3>{ displayName }</h3>
+          <Image src={ displayIcon } alt={ displayName } className='card-image'/>
         </Link>
       </section>
     );
   }
 }
 
-export default Card;
+export default AgentCard;
