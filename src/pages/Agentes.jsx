@@ -2,7 +2,7 @@ import React from 'react';
 import { getAgentsList } from '../data';
 import Header from '../components/Header';
 import Card from '../components/Card';
-import { Link } from 'react-router-dom';
+import '../styles/Agents.css';
 
 class Agentes extends React.Component {
   state = {
@@ -24,14 +24,7 @@ class Agentes extends React.Component {
         <Header />
         <main>
           <div className='card-agents-section'>
-            { agentsList.map((agent) => {
-            if (agent.displayName === 'KAY/O') {
-              agent.displayName = agent.displayName.replaceAll('/', '-');
-            }
-            return ( <Link to={`/agentes/${agent.displayName}`}>
-            <Card obj={ agent } key={ agent.displayName }/>
-            </Link>)
-            }) }
+            { agentsList.map((agent) => <Card obj={ agent } key={ agent.displayName }/>) }
           </div>
         </main>
       </div>

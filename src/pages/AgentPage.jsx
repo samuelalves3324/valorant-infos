@@ -9,7 +9,7 @@ function AgentPage() {
     <div>
       <Header />
       <main>
-        <AgentInfo name={ agent === 'KAY-O' ? agent.replaceAll('-', '/') : agent}/>
+        <AgentInfo name={ agent === 'KAY-O' ? 'KAY/O' : agent}/>
       </main>
     </div>
   );

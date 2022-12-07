@@ -1,0 +1,11 @@
+.agents-page {
+  background-color: #1b1b1b;
+}
+
+.card-agents-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 76%;
+  margin: auto;
+  background-color: #262626;
+}
