@@ -34,11 +34,11 @@ class AgentInfo extends React.Component {
             <Image src={ fullPortrait } alt={ displayName } className="agent-img"/>
           </div>
           <div className='agent-description'>
-            <span>// FUNÇÃO</span>
+            <span className='agent-details'>// FUNÇÃO</span>
             <RoleCard displayName={ roleName } displayIcon={ roleIcon } description={ roleDescription }/>
-            <span>// BIOGRAFIA</span>
+            <span className='agent-details'>// BIOGRAFIA</span>
             <p className='agent-bio'>{ description }</p>
-            <div className='agent-audio'>// ÁUDIO</div>
+            <div className='agent-audio agent-details'>// ÁUDIO</div>
             { mediaList ? <audio controls><source src={ wave } type="audio/wav"/></audio> : '' }
           </div>
         </div>

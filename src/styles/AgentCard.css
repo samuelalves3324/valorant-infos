@@ -17,3 +17,9 @@
   border-radius: 5px;
   display: block;
 }
+
+@media screen and (max-width: 720px) {
+  .agent-card-image {
+    width: 100px;
+  }
+}
