@@ -2,7 +2,6 @@ import React from 'react';
 import Image from './Image';
 import RoleCard from './RoleCard';
 import AbilityCard from './AbilityCard';
-import '../styles/AgentInfo.css';
 import { getAgentByName } from '../data';
 
 class AgentInfo extends React.Component {

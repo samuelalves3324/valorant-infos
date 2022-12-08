@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from './Image';
-import '../styles/AgentCard.css';
 import { Link } from 'react-router-dom';
 
 class AgentCard extends React.Component {

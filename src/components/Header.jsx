@@ -22,8 +22,8 @@ class Header extends React.Component {
           <Link to="/agentes">
             <Button type='button' text='AGENTES' className='buttons' />
           </Link>
-          <Link to="/skins">
-            <Button type='button' text='SKINS' className='buttons' />
+          <Link to="/armas">
+            <Button type='button' text='ARMAS' className='buttons' />
           </Link>
         </div>
       </header>

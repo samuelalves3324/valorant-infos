@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from './Image';
-import '../styles/RoleCard.css'
 
 class RoleCard extends React.Component {
   render() {

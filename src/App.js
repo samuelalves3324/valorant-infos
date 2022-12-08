@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Agentes from './pages/Agentes';
 import AgentPage from './pages/AgentPage';
-import Skins from './pages/Skins';
+import Armas from './pages/Armas';
 import WeaponPage from './pages/WeaponPage';
 import SkinPage from './pages/SkinPage';
 
@@ -16,9 +16,9 @@ class App extends React.Component {
             <Route path="/" element={ <Home /> }/>
             <Route path="/agentes" element={ <Agentes /> }/>
             <Route path="/agentes/:agent" element={ <AgentPage /> }/>
-            <Route path="/skins" element={ <Skins /> }/>
-            <Route path="/skins/:weapon" element={ <WeaponPage /> }/>
-            <Route path="/skins/:weapon/:skin" element={ <SkinPage /> }/>
+            <Route path="/armas" element={ <Armas /> }/>
+            <Route path="/armas/:weapon" element={ <WeaponPage /> }/>
+            <Route path="/armas/:weapon/:skin" element={ <SkinPage /> }/>
           </Routes>
        </Router>
     );

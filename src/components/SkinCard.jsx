@@ -8,7 +8,7 @@ class SkinCard extends React.Component {
     const { displayName, displayIcon, chromas } = obj;
     return (
       <section id={ displayName } className='card'>
-        <Link to={`/skins/${ weaponName }/${ displayName.replaceAll('/', '_') }`}>
+        <Link to={`/armas/${ weaponName }/${ displayName.replaceAll('/', '_') }`}>
           <h3>{ displayName }</h3>
           <Image src={ displayIcon ? displayIcon : chromas[0].displayIcon }/>
         </Link>

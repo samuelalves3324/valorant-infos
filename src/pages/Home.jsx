@@ -19,8 +19,8 @@ class Home extends React.Component {
                 <Link to="/agentes">
                   <Button type='button' text='AGENTES' className='home-page-button' />
                 </Link>
-                <Link to="/skins">
-                  <Button type='button' text='SKINS' className='home-page-button' />
+                <Link to="/armas">
+                  <Button type='button' text='ARMAS' className='home-page-button' />
                 </Link>
               </div>
             </div>

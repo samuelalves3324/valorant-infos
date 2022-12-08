@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from './Image';
-import '../styles/AbilityCard.css';
 
 class AbilityCard extends React.Component {
   render() {

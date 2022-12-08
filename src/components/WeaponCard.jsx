@@ -7,12 +7,10 @@ class WeaponCard extends React.Component {
     const { obj } = this.props;
     const { displayName, displayIcon } = obj;
     return (
-      <section id={ displayName } className="card">
-        <Link to={`/skins/${ displayName }`}>
-          <h3>{ displayName }</h3>
-          <Image src={ displayIcon } alt={ displayName }/>
-        </Link>
-      </section>
+      <Link to={`/armas/${ displayName }`} className="weapon-card">
+        <h3>{ displayName }</h3>
+        <Image src={ displayIcon } alt={ displayName } className="weapon-card-img"/>
+      </Link>
     );
   }
 }
