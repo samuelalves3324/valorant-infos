@@ -10,6 +10,11 @@ class Agentes extends React.Component {
   state = {
     agentsList: [],
     filterInput: '',
+    filterSelect: '',
+  }
+
+  componentDidMount() {
+    this.loadAgents();
   }
 
   loadAgents = async () => {
@@ -27,21 +32,30 @@ class Agentes extends React.Component {
   }
 
   render() {
-    this.loadAgents();
-    const { agentsList, filterInput } = this.state;
+    const { agentsList, filterInput, filterSelect } = this.state;
     return (
-      <div className='agents-page'>
+      <div>
         <Header />
-        <main>
-          <div className='filter-section'>
-            <FormFilter onChange={ this.onFilterChange } value={ filterInput }/> 
-          </div>
-          <div className='card-agents-section'>
-            { agentsList
-            .filter((agent) => agent.displayName.toLowerCase().includes(filterInput.toLowerCase()))
-            .map((agent) => <AgentCard obj={ agent } key={ agent.displayName }/>) }
-          </div>
-        </main>
+        <div className='agents-page'>
+          <main>
+            <div className='filter-section'>
+              <FormFilter onChange={ this.onFilterChange } valueSelect={ filterSelect } valueInput={ filterInput }/> 
+            </div>
+            <div className='card-agents-section'>
+              { agentsList
+              .filter((agent) => agent.displayName.toLowerCase().includes(filterInput.toLowerCase()))
+              .filter((agent) => {
+                if (filterSelect === '' | filterSelect === 'Selecione uma função') {
+                  return agent
+                }
+                if (filterSelect === agent.role.displayName) {
+                  return agent
+                }
+              })
+              .map((agent) => <AgentCard obj={ agent } key={ agent.displayName }/>) }
+            </div>
+          </main>
+        </div>
         <Footer />
       </div>
     );

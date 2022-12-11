@@ -9,6 +9,11 @@ class AgentInfo extends React.Component {
     agentObj: {}
   }
 
+  componentDidMount() {
+    const { name } = this.props;
+    this.loadAgent(name);
+  }
+
   loadAgent = async (name) => {
     const agentObj = await getAgentByName(name);
     this.setState({
@@ -16,8 +21,6 @@ class AgentInfo extends React.Component {
     })
   }
   render() {
-    const { name } = this.props;
-    this.loadAgent(name);
     const { agentObj } = this.state;
     const { displayName, description, fullPortrait, role, abilities, voiceLine } = agentObj;
     const mediaList = voiceLine ? voiceLine.mediaList : undefined;

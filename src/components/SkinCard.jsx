@@ -5,14 +5,17 @@ import Image from './Image';
 class SkinCard extends React.Component {
   render() {
     const { obj, weaponName } = this.props;
-    const { displayName, displayIcon, chromas } = obj;
+    const { displayName, chromas } = obj;
+    const { fullRender } = chromas[0];
     return (
-      <section id={ displayName } className='card'>
+      <div className='skin-card-link'>
         <Link to={`/armas/${ weaponName }/${ displayName.replaceAll('/', '_') }`}>
-          <h3>{ displayName }</h3>
-          <Image src={ displayIcon ? displayIcon : chromas[0].displayIcon }/>
+          <section id={ displayName } className='skin-card'>
+              <h3>{ displayName }</h3>
+              <Image src={ fullRender } className="skin-card-img"/> 
+          </section>
         </Link>
-      </section>
+      </div>
     );
   }
 }

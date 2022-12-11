@@ -1,6 +1,7 @@
 .agents-page {
   background-color: #1b1b1b;
-  min-height: 100vh
+  min-height: 100vh;
+  padding-top: 10vh;
 }
 
 .card-agents-section {
@@ -16,7 +17,6 @@
 .filter-section {
   width: 76%;
   margin: auto;
-  margin-top: 3px;
   background-color: #262626;
   padding: 10px;
 }
@@ -67,7 +67,7 @@
 .agent-info {
   background-color: #1b1b1b;
   color: white;
-  padding-top: 30px;
+  padding-top: 10vh;
 }
 
 .agent-img {
@@ -205,27 +205,44 @@
   display: block;
 }
 
-@media screen and (max-width: 720px) {
-  .agents-page {
-    background-color: #262626;
-  }
+.filters-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+select {
+  background-color: #717171;
+  color: white;
+  padding: 10px;
+  font-size: 1.6rem;
+  outline: none;
+  cursor: pointer;
+}
+
+option {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 720px) {
   .card-agents-section {
-    width: 94%;
+    padding-top: 0;
+    width: 96%;
   }
 
   .filter-section {
     width: 94%;
+    padding-bottom: 0;
   }
 
   .form-filter {
     display: flex;
     flex-direction: column;
-    margin: 0 9%;
   }
   .agent-curiosities {
-    flex-wrap: wrap;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .abilities-section {
@@ -233,7 +250,7 @@
   }
 
   .agent-description {
-    margin-left: 20px;
+    margin-left: 10%;
   }
 
   .agent-info h1 {
@@ -243,5 +260,18 @@
   .ability-card {
     max-width: 350px;
     min-width: 350px;
+  }
+  
+  .filters-section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .input-section {
+    background-color: #717171;
+    display: inline-block;
+    border-radius: 0;
+  }
+  select {
+   margin-top: 10px;
   }
 }

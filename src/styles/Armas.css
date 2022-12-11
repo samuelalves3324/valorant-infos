@@ -1,6 +1,6 @@
 .weapons-container {
-  justify-content: center;
-  background-color: #fafafa;
+  padding-top: 10vh;
+  background-color: #e4e4e4;
   width: 90%;
   margin: auto;
   padding-bottom: 30px;

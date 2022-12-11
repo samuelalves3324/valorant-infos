@@ -1,13 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/valorant');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+root {
+  margin-top: 10vh;
+}
+
 * {
   font-family: 'Ubuntu', sans-serif;
   font-size: 10px;
 }
 
 main {
-  padding-top: 10vh;
   min-height: 79.7vh;
 }
 

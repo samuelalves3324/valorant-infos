@@ -9,6 +9,10 @@ class SkinInfo extends React.Component {
     skinObj: {}
   }
 
+  componentDidMount() {
+    this.loadSkin();
+  }
+
   loadSkin = async () => {
     const { weaponName, skinName } = this.props;
     const skinObj = await getSkinByName(weaponName, skinName);
@@ -18,23 +22,25 @@ class SkinInfo extends React.Component {
   }
 
   render() {
-    this.loadSkin();
     const { skinObj } = this.state;
-    const { displayName, levels, displayIcon, chromas } = skinObj;
-    const secondImage = chromas ? chromas[0].displayIcon : '';
+    const { displayName, levels, chromas } = skinObj;
+    const fullRender  = chromas ? chromas[0].fullRender : '';
     const chromasList = chromas ? chromas : [];
+    const skinLevels = levels ? levels : [];
     return(
       <div>
         <main>
-          <h1>{ displayName }</h1>
-          <Image src={ displayIcon ? displayIcon : secondImage }/>
-          { levels ? levels.map((level, index) => <SkinLevel obj={ level } index={ index } key={`${ displayName } ${index}`}/>) : ''}
-          <section>
-            { chromasList.length > 1 ? <h2>Variantes</h2> : '' }
-            { chromasList
-            .filter((chroma, index) => index !== 0)
-            .map((chroma) => <SkinChroma obj={ chroma } key={ chroma.displayName }/>) }
-          </section>
+          <div className='skin-page'>
+            <h1>{ displayName }</h1>
+            <Image src={ fullRender }/>
+            { skinLevels.length > 1 ? skinLevels.map((level, index) => <SkinLevel obj={ level } index={ index } key={`${ displayName } ${index}`}/>) : <h2>Essa skin não possui upgrades</h2>}
+            <section>
+              { chromasList.length > 1 ? <h2>Variantes</h2> : <h2>Essa skin não possui variantes</h2> }
+              { chromasList
+              .filter((chroma, index) => index !== 0)
+              .map((chroma) => <SkinChroma obj={ chroma } key={ chroma.displayName }/>) }
+            </section>
+          </div>
         </main>
       </div>
     );

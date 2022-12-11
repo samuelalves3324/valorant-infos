@@ -1,10 +1,16 @@
 import React from 'react';
 import { getWeaponSkinsByName } from '../data';
 import SkinCard from './SkinCard';
+import '../styles/Skins.css';
 
 class WeaponSkins extends React.Component {
   state = {
     weaponSkinsArray: [],
+  }
+
+  componentDidMount() {
+    const { name } = this.props;
+    this.loadWeapon(name);
   }
 
   loadWeapon = async (name) => {
@@ -16,7 +22,6 @@ class WeaponSkins extends React.Component {
   }
   render() {
     const { name } = this.props;
-    this.loadWeapon(name);
     const { weaponSkinsArray } = this.state;
     return (
       <section className='weapons-section'>
