@@ -3,10 +3,12 @@ import { getSkinByName } from '../data';
 import Image from './Image';
 import SkinChroma from './SkinChroma';
 import SkinLevel from './SkinLevel';
+import Loading from './Loading';
 
 class SkinInfo extends React.Component {
   state = {
-    skinObj: {}
+    skinObj: {},
+    loading: true,
   }
 
   componentDidMount() {
@@ -17,16 +19,21 @@ class SkinInfo extends React.Component {
     const { weaponName, skinName } = this.props;
     const skinObj = await getSkinByName(weaponName, skinName);
     this.setState({
-      skinObj: skinObj
+      skinObj: skinObj,
+      loading: false
     })
   }
 
   render() {
-    const { skinObj } = this.state;
+    const { skinObj, loading } = this.state;
     const { displayName, levels, chromas } = skinObj;
     const fullRender  = chromas ? chromas[0].fullRender : '';
     const chromasList = chromas ? chromas : [];
     const skinLevels = levels ? levels : [];
+
+    if(loading) {
+      return <Loading />
+    }
     return(
       <div>
         <main>

@@ -5,12 +5,14 @@ import AgentCard from '../components/AgentCard';
 import '../styles/Agents.css';
 import FormFilter from '../components/FormFilter';
 import Footer from '../components/Footer';
+import Loading from '../components/Loading';
 
 class Agentes extends React.Component {
   state = {
     agentsList: [],
     filterInput: '',
     filterSelect: '',
+    loading: true,
   }
 
   componentDidMount() {
@@ -21,6 +23,7 @@ class Agentes extends React.Component {
     const agents = await getAgentsList();
     this.setState({
       agentsList: agents,
+      loading: false,
     })
   }
 
@@ -32,7 +35,11 @@ class Agentes extends React.Component {
   }
 
   render() {
-    const { agentsList, filterInput, filterSelect } = this.state;
+    const { agentsList, filterInput, filterSelect, loading } = this.state;
+
+    if(loading) {
+      return <Loading />
+    }
     return (
       <div>
         <Header />

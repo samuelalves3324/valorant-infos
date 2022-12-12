@@ -227,7 +227,7 @@ option {
 @media screen and (max-width: 720px) {
   .card-agents-section {
     padding-top: 0;
-    width: 96%;
+    width: 94%;
   }
 
   .filter-section {

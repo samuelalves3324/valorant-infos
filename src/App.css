@@ -28,9 +28,7 @@ a {
 }
 
 video {
-  width: 50%;
-  height: 50%;
-  border: solid 2px white;
+  width: 80%;
 }
 
 .buttons {

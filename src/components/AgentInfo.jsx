@@ -3,10 +3,12 @@ import Image from './Image';
 import RoleCard from './RoleCard';
 import AbilityCard from './AbilityCard';
 import { getAgentByName } from '../data';
+import Loading from './Loading';
 
 class AgentInfo extends React.Component {
   state = {
-    agentObj: {}
+    agentObj: {},
+    loading: true,
   }
 
   componentDidMount() {
@@ -17,17 +19,22 @@ class AgentInfo extends React.Component {
   loadAgent = async (name) => {
     const agentObj = await getAgentByName(name);
     this.setState({
-      agentObj: agentObj
+      agentObj: agentObj,
+      loading: false
     })
   }
   render() {
-    const { agentObj } = this.state;
+    const { agentObj, loading } = this.state;
     const { displayName, description, fullPortrait, role, abilities, voiceLine } = agentObj;
     const mediaList = voiceLine ? voiceLine.mediaList : undefined;
     const wave = mediaList ? mediaList[0].wave : "";
     const roleName = role ? role.displayName : "";
     const roleIcon = role ? role.displayIcon : "";
     const roleDescription = role ? role.description : "";
+
+    if(loading) {
+      return <Loading />
+    }
     return (
       <section className='agent-info'>
         <div className='agent-curiosities'>

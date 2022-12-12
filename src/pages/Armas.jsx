@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import WeaponCard from '../components/WeaponCard';
 import { getWeaponsList } from '../data';
 import '../styles/Armas.css';
@@ -13,7 +14,8 @@ class Armas extends React.Component {
     knife: [],
     riflesList: [],
     shotgunsList: [],
-    snipersList: []
+    snipersList: [],
+    loading: true,
   }
 
   componentDidMount() {
@@ -37,11 +39,16 @@ class Armas extends React.Component {
       snipersList,
       sidearmList,
       knife,
+      loading: false,
     })
   }
 
   render() {
-    const { smgList, heavyList, sidearmList, knife, riflesList, shotgunsList, snipersList } = this.state;
+    const { smgList, heavyList, sidearmList, knife, riflesList, shotgunsList, snipersList, loading } = this.state;
+
+    if(loading) {
+      return <Loading />
+    }
     return (
       <div>
         <Header />
