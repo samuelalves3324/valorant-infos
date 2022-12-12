@@ -7,9 +7,9 @@ class SkinLevel extends React.Component {
     return(
       <section>
         <h2>{`Nível ${index + 1}`}</h2>
-        { streamedVideo ? <video controls>
+        { streamedVideo && <video controls>
           <source src={ streamedVideo }/>
-        </video> : '' }
+        </video>}
       </section>
     );
   }

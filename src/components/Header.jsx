@@ -18,14 +18,14 @@ class Header extends React.Component {
               <h1>vALORANT INFOS</h1>
           </div>
         </Link>
-        <div className='header-buttons-container'>
+        <nav>
           <Link to="/agentes">
             <Button type='button' text='AGENTES' className='buttons' />
           </Link>
           <Link to="/armas">
             <Button type='button' text='ARMAS' className='buttons' />
           </Link>
-        </div>
+        </nav>
       </header>
     );
   }

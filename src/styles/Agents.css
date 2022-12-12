@@ -150,7 +150,6 @@
   margin: 0 10px;
 }
 
-
 .ability-card {
   padding: 10px;
   background-color: #262626;
@@ -242,6 +241,7 @@ option {
     display: flex;
     flex-direction: column;
   }
+
   .agent-curiosities {
     flex-direction: column;
     justify-content: center;
@@ -273,17 +273,19 @@ option {
     max-width: 80%;
     min-width: 80%;
   }
-  
+
   .filters-section {
     flex-direction: column;
     justify-content: center;
   }
+
   .input-section {
     background-color: #717171;
     display: inline-block;
     border-radius: 0;
   }
+
   select {
-   margin-top: 10px;
+    margin-top: 10px;
   }
 }

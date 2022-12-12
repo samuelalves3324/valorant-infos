@@ -4,9 +4,9 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import WeaponCard from '../components/WeaponCard';
 import { getWeaponsList } from '../data';
-import '../styles/Armas.css';
+import '../styles/Weapons.css';
 
-class Armas extends React.Component {
+class Weapons extends React.Component {
   state = {
     smgList: [],
     heavyList: [],
@@ -104,4 +104,4 @@ class Armas extends React.Component {
   }
 }
 
-export default Armas;
+export default Weapons;

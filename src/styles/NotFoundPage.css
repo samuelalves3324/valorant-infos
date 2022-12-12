@@ -1,0 +1,16 @@
+.not-found-page {
+  padding-top: 10vh;
+  min-height: 79.7vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-page h1 {
+  font-size: 8rem;
+  color: white;
+  text-align: center;
+}
+

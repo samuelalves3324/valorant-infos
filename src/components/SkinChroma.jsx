@@ -12,7 +12,7 @@ class SkinChroma extends React.Component {
           <Image src={ swatch } className='skin-page-swatch'/>
           <h5>{ displayName }</h5>
         </div>
-        { displayIcon ? <Image src={ displayIcon } className='skin-level-img'/> : '' }
+        { displayIcon && <Image src={ displayIcon } className='skin-level-img'/>}
         { streamedVideo ? <video controls>
           <source src={ streamedVideo }/>
         </video> : ''}

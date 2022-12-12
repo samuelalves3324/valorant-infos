@@ -5,6 +5,10 @@ root {
   margin-top: 10vh;
 }
 
+body {
+  margin: 0;
+}
+
 * {
   font-family: 'Ubuntu', sans-serif;
   font-size: 10px;

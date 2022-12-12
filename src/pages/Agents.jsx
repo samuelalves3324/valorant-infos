@@ -7,7 +7,7 @@ import FormFilter from '../components/FormFilter';
 import Footer from '../components/Footer';
 import Loading from '../components/Loading';
 
-class Agentes extends React.Component {
+class Agents extends React.Component {
   state = {
     agentsList: [],
     filterInput: '',
@@ -69,4 +69,4 @@ class Agentes extends React.Component {
   }
 }
 
-export default Agentes;
+export default Agents;
