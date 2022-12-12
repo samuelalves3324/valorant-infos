@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
-  width: 550px;
+  width: 350px;
 }
 
 .skin-card:hover{
@@ -29,15 +29,77 @@
 }
 
 .skin-card h3 {
-  font-size: 2.6rem;
-  margin: 5px;
+  font-size: 1.8rem;
+  margin: 10px 0 20px 0;
   text-align: center;
 }
 
 .skin-card-img {
-  height: 150px;
+  height: 100px;
+  max-width: 340px;
+  margin-bottom: 5px;
 }
 
 .skin-page {
   padding-top: 10vh;
+  min-height: 79.6vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.skin-page h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.skin-page h2, h3 {
+  font-size: 3rem; 
+}
+
+.skin-page h5 {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.skin-page-img {
+  width: 40%;
+}
+
+.skin-level-img {
+  width: 35%;
+  margin: 10px;
+}
+
+.skin-page-swatch {
+  width: 30px;
+  border: solid 1px white;
+}
+
+.skin-chroma-title-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.skin-chromas-section {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .skin-page {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skin-page-img {
+    width: 100%;
+  }
+
+  .skin-level-img {
+    width: 100%;
+  }
 }

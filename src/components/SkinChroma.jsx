@@ -7,12 +7,16 @@ class SkinChroma extends React.Component {
     const { swatch, displayIcon, streamedVideo, displayName } = obj; 
     return (
       <div>
-        <h3>{ displayName }</h3>
-        <Image src={ swatch }/>
-        { displayIcon ? <Image src={ displayIcon }/> : '' }
+        <hr />
+        <div className='skin-chroma-title-container'>
+          <Image src={ swatch } className='skin-page-swatch'/>
+          <h5>{ displayName }</h5>
+        </div>
+        { displayIcon ? <Image src={ displayIcon } className='skin-level-img'/> : '' }
         { streamedVideo ? <video controls>
           <source src={ streamedVideo }/>
         </video> : ''}
+        
       </div>
     );
   }

@@ -32,9 +32,9 @@ class SkinInfo extends React.Component {
         <main>
           <div className='skin-page'>
             <h1>{ displayName }</h1>
-            <Image src={ fullRender }/>
+            <Image src={ fullRender } className='skin-page-img'/>
             { skinLevels.length > 1 ? skinLevels.map((level, index) => <SkinLevel obj={ level } index={ index } key={`${ displayName } ${index}`}/>) : <h2>Essa skin não possui upgrades</h2>}
-            <section>
+            <section className='skin-chromas-section'>
               { chromasList.length > 1 ? <h2>Variantes</h2> : <h2>Essa skin não possui variantes</h2> }
               { chromasList
               .filter((chroma, index) => index !== 0)
