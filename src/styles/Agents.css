@@ -68,6 +68,8 @@
   background-color: #1b1b1b;
   color: white;
   padding-top: 10vh;
+  width: 95%;
+  margin: auto;
 }
 
 .agent-img {
@@ -117,6 +119,7 @@
 .abilities-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .role-card {
@@ -153,8 +156,8 @@
   background-color: #262626;
   border-radius: 20px;
   margin: 10px;
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 40%;
+  max-width: 40%;
 }
 
 .ability-card h4 {
@@ -253,13 +256,22 @@ option {
     margin-left: 10%;
   }
 
+  .agent-img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .agent-info {
+    width: 100%;
+  }
+
   .agent-info h1 {
     margin-top: 10px;
   }
 
   .ability-card {
-    max-width: 350px;
-    min-width: 350px;
+    max-width: 80%;
+    min-width: 80%;
   }
   
   .filters-section {
