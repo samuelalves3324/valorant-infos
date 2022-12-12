@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import '../styles/NotFoundPage.css';
 
 class NotFoundPage extends React.Component {
