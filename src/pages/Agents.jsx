@@ -51,14 +51,7 @@ class Agents extends React.Component {
             <div className='card-agents-section'>
               { agentsList
               .filter((agent) => agent.displayName.toLowerCase().includes(filterInput.toLowerCase()))
-              .filter((agent) => {
-                if (filterSelect === '' | filterSelect === 'Selecione uma função') {
-                  return agent
-                }
-                if (filterSelect === agent.role.displayName) {
-                  return agent
-                }
-              })
+              .filter((agent) => (filterSelect === '' || filterSelect === 'Selecione uma função' || filterSelect === agent.role.displayName ))
               .map((agent) => <AgentCard obj={ agent } key={ agent.displayName }/>) }
             </div>
           </main>

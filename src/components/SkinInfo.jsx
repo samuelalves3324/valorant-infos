@@ -44,7 +44,7 @@ class SkinInfo extends React.Component {
             <section className='skin-chromas-section'>
               { chromasList.length > 1 ? <h2>Variantes</h2> : <h2>Essa skin não possui variantes</h2> }
               { chromasList
-              .filter((chroma, index) => index !== 0)
+              .filter((_chroma, index) => index !== 0)
               .map((chroma) => <SkinChroma obj={ chroma } key={ chroma.displayName }/>) }
             </section>
           </div>
